@@ -10,3 +10,9 @@ $ go build hello.go
 // 実行
 $ ./hello
 ```
+
+## コードフォーマット
+
+```
+$ go fmt ./
+```
