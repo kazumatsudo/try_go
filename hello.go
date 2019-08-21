@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	"time"
 )
 
@@ -43,7 +44,23 @@ func task(second int) {
 	fmt.Printf("finish: %d s\n", second)
 }
 
+func getStringAfterTask(second int, result chan string) {
+	time.Sleep(time.Duration(second) * time.Second)
+	fmt.Printf("finish\n")
+
+	result <- "result after " + strconv.Itoa(second) + " s\n"
+}
+
 func main() {
+	{ // チャンネル
+		result := make(chan string)
+
+		go getStringAfterTask(1, result)
+
+		fmt.Printf(<-result)
+		task(1)
+	}
+
 	{ // 並行処理
 		go task(1)
 		go task(2)

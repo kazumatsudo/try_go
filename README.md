@@ -31,6 +31,11 @@ if err != nil {
 }
 // do something with the open *File f
 
-// 並行処理
+// 並行処理 ゴルーチン
 go xxx()
+
+// ゴルーチン間でデータ受け渡し
+var ch chan int
+var ch <- chan int // 受信専用
+var ch chan<- int // 送信専用
 ```
