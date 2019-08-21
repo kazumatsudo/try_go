@@ -30,4 +30,7 @@ if err != nil {
     log.Fatal(err)
 }
 // do something with the open *File f
+
+// 並行処理
+go xxx()
 ```
