@@ -22,4 +22,12 @@ $ go fmt ./
 ```
 // defer は関数スコープを離れるときに実行する
 defer response.Body.Close()
+
+// エラーハンドリング
+// 1番目の引数に成功時の返り値、2番目の引数に error インタフェースを返却する
+f, err := os.Open("filename.ext")
+if err != nil {
+    log.Fatal(err)
+}
+// do something with the open *File f
 ```
