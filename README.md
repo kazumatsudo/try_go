@@ -39,3 +39,10 @@ var ch chan int
 var ch <- chan int // 受信専用
 var ch chan<- int // 送信専用
 ```
+
+
+## 読み物
+
+- [他言語プログラマがgolangの基本を押さえる為のまとめ](https://qiita.com/tfrcm/items/e2a3d7ce7ab8868e37f7)
+- [動的言語だけやってた僕が、38日間Go言語を書いて学んだこと](https://qiita.com/suin/items/22662f43b6a6e8728798)
+- [さあGoを始めよう！環境構築，”Hello World”から簡単なバックエンドサーバーまで](https://postd.cc/how-i-start-go/)
