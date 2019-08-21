@@ -16,3 +16,10 @@ $ ./hello
 ```
 $ go fmt ./
 ```
+
+## Tips
+
+```
+// defer は関数スコープを離れるときに実行する
+defer response.Body.Close()
+```
